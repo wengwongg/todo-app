@@ -1,3 +1,3 @@
 export default function Separator() {
-  return <div>★</div>;
+  return <div>✦</div>;
 }

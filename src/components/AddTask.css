@@ -1,0 +1,58 @@
+.add_task_form {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0;
+}
+
+#add_task_textbox {
+  border: none;
+  background-color: #131313;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-family: "Gupter", serif;
+  width: 17rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+  transition: 0.5s ease;
+  margin-right: 0.75rem;
+}
+
+#add_task_textbox:hover,
+#add_task_textbox:focus {
+  outline: none;
+  padding-bottom: 0.7rem;
+}
+
+#tag_textbox {
+  background-color: #fff;
+  border: none;
+  padding: 0.5rem;
+  width: 9rem;
+  font-family: "Gupter", serif;
+  font-size: 1rem;
+  border-radius: 3px;
+  max-height: 20px;
+  transition: 0.25s ease;
+}
+
+#tag_textbox:hover,
+#tag_textbox:focus {
+  outline: 1px solid #676767;
+}
+
+#add_to_list_button {
+  font-family: "Gupter", serif;
+  font-size: 1rem;
+  padding: 0.5rem;
+  background-color: #393939;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  transition: 0.25s ease;
+  margin-left: 0.75rem;
+}
+
+#add_to_list_button:hover {
+  cursor: pointer;
+  background-color: #303030;
+}

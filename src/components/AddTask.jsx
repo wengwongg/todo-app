@@ -1,3 +1,5 @@
+import "./AddTask.css";
+
 import { useState } from "react";
 import { useDataContext, useSetDataContext } from "../DataContext.js";
 import {
@@ -31,6 +33,8 @@ export default function AddTask() {
       setData([...data, newTask]);
 
       // Need to add to displayed tasks if its tag aligns with current filter or there is no filter at all.
+      console.log(filter === "" || filter === tagInput);
+      console.log(filter, tagInput);
       if (filter === "" || filter === tagInput) {
         setDisplayedData([...displayedData, newTask]);
       }
@@ -57,7 +61,7 @@ export default function AddTask() {
         value={tagInput}
         onChange={(e) => setTagInput(e.target.value)}
       ></input>
-      <input type="submit" value="add to list" />
+      <input id="add_to_list_button" type="submit" value="add to list" />
     </form>
   );
 }

@@ -1,3 +1,5 @@
+import "./FilterTag.css";
+
 import { useState } from "react";
 
 import { useDataContext } from "../DataContext.js";
@@ -23,7 +25,9 @@ export default function FilterTag() {
         )
       );
     } else {
+      // filter input is ""
       setDisplayedData(data);
+      setFilter("");
     }
   };
 
@@ -37,7 +41,7 @@ export default function FilterTag() {
         value={filterInput}
         onChange={(e) => setFilterInput(e.target.value)}
       ></input>
-      <input type="submit" value="reset/filter" />
+      <input id="filter_button" type="submit" value="reset/filter" />
     </form>
   );
 }

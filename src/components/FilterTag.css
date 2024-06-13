@@ -1,0 +1,16 @@
+#filter_button {
+  font-family: "Gupter", serif;
+  font-size: 1rem;
+  padding: 0.5rem;
+  background-color: #393939;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  transition: 0.25s ease;
+  margin-left: 0.75rem;
+}
+
+#filter_button:hover {
+  cursor: pointer;
+  background-color: #303030;
+}

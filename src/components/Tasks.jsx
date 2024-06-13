@@ -1,3 +1,5 @@
+import "./Tasks.css";
+
 import Task from "./Task";
 
 export default function Tasks({ tasks }) {

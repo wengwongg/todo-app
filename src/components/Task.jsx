@@ -1,3 +1,5 @@
+import "./Task.css";
+
 import { useDataContext, useSetDataContext } from "../DataContext.js";
 import {
   useSetDisplayedDataContext,
@@ -39,19 +41,27 @@ export default function Task({ task }) {
 
   if (task.done) {
     return (
-      <li>
-        <p>
+      <li className="task">
+        <p className="task_description">
           <s>{task.description}</s>
         </p>
       </li>
     );
   } else {
     return (
-      <li>
-        <p>{task.description}</p>
-        <p>{task.tag}</p>
-        <button onClick={deleteTask}>✗</button>
-        <button onClick={markTaskDone}>✓</button>
+      <li className="task">
+        <div className="task_left_wrapper">
+          <p className="task_description">{task.description}</p>
+        </div>
+        <div className="task_right_wrapper">
+          <p className="task_tag">{task.tag}</p>
+          <button className="delete_button" onClick={deleteTask}>
+            ✗
+          </button>
+          <button className="done_button" onClick={markTaskDone}>
+            ✓
+          </button>
+        </div>
       </li>
     );
   }

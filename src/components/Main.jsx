@@ -1,3 +1,5 @@
+import "./Main.css";
+
 import { useState } from "react";
 
 import AddTask from "./AddTask";
@@ -23,8 +25,10 @@ export default function Main() {
         <SetDisplayedDataContext.Provider value={setDisplayedData}>
           <FilterContext.Provider value={filterTag}>
             <SetFilterContext.Provider value={setFilterTag}>
-              <AddTask />
-              <FilterTag />
+              <div className="add_and_filter_wrapper">
+                <AddTask />
+                <FilterTag />
+              </div>
               <Tasks tasks={displayedData.filter((task) => !task.done)} />
             </SetFilterContext.Provider>
           </FilterContext.Provider>

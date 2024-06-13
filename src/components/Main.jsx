@@ -25,7 +25,7 @@ export default function Main() {
             <SetFilterContext.Provider value={setFilterTag}>
               <AddTask />
               <FilterTag />
-              <Tasks tasks={displayedData} />
+              <Tasks tasks={displayedData.filter((task) => !task.done)} />
             </SetFilterContext.Provider>
           </FilterContext.Provider>
         </SetDisplayedDataContext.Provider>
